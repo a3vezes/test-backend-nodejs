@@ -8,6 +8,8 @@ const xss = require('xss-clean')
 const mongoSanitize = require('express-mongo-sanitize')
 const connectDB = require('./utils/db')
 
+const products = require('./routes/products')
+
 connectDB()
 
 // Body Parser
@@ -26,9 +28,7 @@ app.use(cors())
 app.use(xss())
 
 // Routes
-app.use('/', (req, res) => {
-  res.send('Hello World')
-})
+app.use('/api/v1/products', products)
 
 const PORT = process.env.PORT || 5001
 
