@@ -1,0 +1,26 @@
+[
+  {
+    "title": "MacBook Air",
+    "price": 5000,
+    "description": "MacBook Air With M1 Chip",
+    "category": "5d7a514b5d2c12c7449be020"
+  },
+  {
+    "title": "MacBook Pro",
+    "price": 7000,
+    "description": "MacBook Pro With M1 Chip",
+    "category": "5d7a514b5d2c12c7449be020"
+  },
+  {
+    "title": "Veja",
+    "price": 19,
+    "description": "Veja object cleaner",
+    "category": "5d7a514b5d2c12c7449be021"
+  },
+  {
+    "title": "OMO",
+    "price": 25,
+    "description": "OMO object cleaner",
+    "category": "5d7a514b5d2c12c7449be021"
+  }
+]
