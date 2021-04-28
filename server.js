@@ -9,6 +9,7 @@ const mongoSanitize = require('express-mongo-sanitize')
 const connectDB = require('./utils/db')
 
 const products = require('./routes/products')
+const category = require('./routes/category')
 
 connectDB()
 
@@ -29,6 +30,7 @@ app.use(xss())
 
 // Routes
 app.use('/api/v1/products', products)
+app.use('/api/v1/category', category)
 
 const PORT = process.env.PORT || 5001
 
