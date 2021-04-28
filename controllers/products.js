@@ -3,7 +3,12 @@ const Product = require('../models/Product')
 // @desc Get products
 // @route GET /api/v1/products
 exports.getProducts = async (req, res) => {
-  const products = await Product.find({}).populate('Category')
+  const reqQuery = { ...req.query }
+
+  const products = await Product.find(reqQuery).populate({
+    path: 'category',
+    select: 'name -_id',
+  })
 
   if (!products) {
     return res
@@ -17,7 +22,10 @@ exports.getProducts = async (req, res) => {
 // @desc Get single product
 // @route GET /api/v1/products/:id
 exports.getProduct = async (req, res) => {
-  const product = await Product.findById(req.params.id).populate('Category')
+  const product = await Product.findById(req.params.id).populate({
+    path: 'category',
+    select: 'name -_id',
+  })
 
   if (!product) {
     return res
